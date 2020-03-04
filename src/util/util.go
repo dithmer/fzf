@@ -2,10 +2,8 @@ package util
 
 import (
 	"math"
-	"os"
 	"time"
 
-	"github.com/mattn/go-isatty"
 	"github.com/mattn/go-runewidth"
 )
 
@@ -110,7 +108,7 @@ func DurWithin(
 
 // IsTty returns true is stdin is a terminal
 func IsTty() bool {
-	return isatty.IsTerminal(os.Stdin.Fd())
+	return false
 }
 
 // Once returns a function that returns the specified boolean value only once
